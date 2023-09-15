@@ -1,27 +1,10 @@
 name: try-jupyter
 channels:
-- conda-forge
+  - https://repo.mamba.pm/emscripten-forge
+  - conda-forge
 dependencies:
-- python=3.10
-- mamba
-- pydata-sphinx-theme
-- myst-parser
-- bqplot
-- ipycanvas >=0.9.1
-- ipyleaflet
-- ipympl>=0.8.2
-- ipywidgets>=8,<9
-- jupyterlab>=3.5.2,<4
-- jupyterlab-language-pack-fr-FR
-- jupyterlab-language-pack-zh-CN
-- jupyterlab-fasta>=3,<4
-- jupyterlab-geojson>=3,<4
-- jupyterlab-tour
-- jupyterlab-night
-- jupyterlite-core=0.1.2
-- jupyterlite-pyodide-kernel=0.1.1
-- jupyterlite-sphinx>=0.9.1,<0.10
-- plotly>=5,<6
-- pip:
-  - jupyterlite-xeus-sqlite==0.2.1
-  - jupyterlab-open-url-parameter
+  - ipywidgets >=8.1.1,<9
+  - matplotlib
+  - numpy >=1.17.3,<1.25 # for scipy
+  - scipy=1.8
+

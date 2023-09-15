@@ -20,13 +20,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Conda environment from environment.yml
-        uses: mamba-org/provision-with-micromamba@v12
+
+      - name: Install mamba
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          micromamba-version: '1.5.1-0'
+          environment-file: build-environment.yml
+          cache-environment: true
+
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
           cp README.md content
           jupyter lite build --contents content --output-dir dist
+
       - name: Upload dist
         uses: actions/upload-pages-artifact@v1
         with:
