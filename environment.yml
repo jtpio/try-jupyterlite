@@ -1,7 +1,7 @@
 name: try-jupyter
 channels:
   - https://repo.mamba.pm/emscripten-forge
-  - https://repo.mamba.pm/conda-forge
+  - conda-forge
 dependencies:
   - ipywidgets >=8,<9
   - matplotlib
